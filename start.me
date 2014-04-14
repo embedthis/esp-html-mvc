@@ -2,10 +2,10 @@
     start.me - MakeMe file (esp-html-mvc)
  */
 
-Bit.load({
+Me.load({
     targets: {
         comp: {
-            build: `run('esp -r -q compile')`,
+            run: 'esp -r -q compile',
         },
         run: {
             depends: ['comp'],
