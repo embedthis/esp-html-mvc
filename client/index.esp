@@ -11,7 +11,7 @@
         <h2>Quick Start</h2>
         <ol>
             <li><b><a href="http://embedthis.com/products/appweb/doc/guide/esp/users/pages.html">Create ESP Pages</b></a>
-            <p>Create web pages under the <b>clients</b> directory or to group pages together, under <b>clients/pages</b>. 
+            <p>Create web pages under the <b>clients</b> directory.
                 Modify the layout in "layouts/default.esp" and customize the Less-based style sheet in the 
                 "css/app.less" and "css/theme.less".</p>
             </li>

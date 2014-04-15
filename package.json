@@ -11,6 +11,7 @@
     },
     "export": [
         "client/**",
+        "layouts/**",
         "start.me",
         "templates/**"
     ],
