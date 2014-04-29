@@ -22,7 +22,7 @@
             from: [ 
                 "css/*",
             ],
-            to: '${JSLIB}/esp-html-mvc',
+            to: '${LIB}/esp-html-mvc',
         }, {
             overwrite: false,
             from: [ 

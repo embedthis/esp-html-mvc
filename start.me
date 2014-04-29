@@ -4,8 +4,11 @@
 
 Me.load({
     targets: {
-        comp: {
-            run: 'esp -r -q compile',
+        'build-html-mvc': {
+            build: `
+                trace('Compile', 'esp compile')
+                run('esp -q compile')
+            `,
         },
         run: {
             depends: ['comp'],
@@ -13,7 +16,7 @@ Me.load({
         },
         cleanCache: {
             type: 'clean',
-            action: "rm('cache/*')",
+            action: `rm('cache/*')`,
         },
     },
 })
