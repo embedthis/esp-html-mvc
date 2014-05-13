@@ -35,7 +35,7 @@
             "generate": {
                 "-appweb": "esp-mvc/generate/appweb.conf",
                 "-controller": "esp-mvc/generate/controller.c",
-                "-controllerSingleton": "esp-mvc/generate/controller.c",
+                "-controllerSingleton": "esp-mvc/generate/controllerSingleton.c",
 
                 "?appweb": "esp-html-mvc/generate/appweb.conf",
                 "?clientList": "esp-html-mvc/generate/list.esp",
