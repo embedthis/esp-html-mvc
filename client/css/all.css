@@ -3,7 +3,7 @@
  */
 
 /*
-    app.less - Default esp-html-mvc style sheet.
+    app.less - Default application style sheet. (esp-html-mvc)
  */
 
 body {
@@ -244,7 +244,7 @@ table th {
 }
 
 /*
-    theme.less - Application theme variables
+    theme.less - Application theme variables (esp-html-mvc)
  */
 
 /*
