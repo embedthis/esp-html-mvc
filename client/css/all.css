@@ -3,17 +3,7 @@
  */
 
 /*
-    Angular cloak fix. Must load before loading less sheets
- */
-
-[ng\:cloak],
-[ng-cloak],
-.ng-cloak {
-  display: none !important;
-}
-
-/*
-    app.less - Default ESP angular-mvc style sheet.
+    app.less - Default esp-html-mvc style sheet.
  */
 
 body {
