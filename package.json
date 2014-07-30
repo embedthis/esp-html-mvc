@@ -15,7 +15,7 @@
         "esp",
     ],
     "dependencies": {
-        "esp-mvc": "~5.0"
+        "esp-mvc": "~5"
     },
     "export": [ {
             from: [ "css/*" ],
