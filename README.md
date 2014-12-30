@@ -1,11 +1,11 @@
-esp-html-mvc
+esp-html-skeleton
 ===
 
-Pak for esp-html-mvc
+Pak for esp-html-skeleton
 
 ### To install:
 
-pak install esp-html-mvc
+pak install esp-html-skeleton
 
 ### Get Pak from
 

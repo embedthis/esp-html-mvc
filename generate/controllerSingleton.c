@@ -1,5 +1,5 @@
 /*
-    ${CONTROLLER} Controller (esp-html-mvc)
+    ${CONTROLLER} Controller (esp-html-skeleton)
  */
 #include "esp.h"
 
