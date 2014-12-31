@@ -40,5 +40,6 @@
     ],
     "ignore": [
         "start.me"
-    ]
+    ],
+    "skeleton": true
 }

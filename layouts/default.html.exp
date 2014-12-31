@@ -5,7 +5,7 @@
 </head>
 <body>
     <@ partial('nav') @>
-    <main class="content" ng-cloak>
+    <main class="content">
         <@ content @>
     </main>
     <@ partial('footer') @>
