@@ -17,7 +17,6 @@
             "?store": "app"
         },
         "-routes": "esp-server",
-        "?routes": "esp-html-mvc",
-        "xsrf": true
+        "?routes": "esp-restful"
     }
 }

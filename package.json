@@ -18,28 +18,25 @@
     "dependencies": {
         "esp-mvc": "~5.3",
         "exp-js": "~0.1",
-        "exp-less": "~0.1",
-        "exp-css": "~0.1",
-        "exp-esp": "~0.1",
-        "exp-gzip": "~0.1"
+        "exp-less": "~0.2",
+        "exp-css": "~0.2",
+        "exp-esp": "~0.1"
     },
-    "export": [
-        {
-            "from": [ 
-                "documents/**",
-                "layouts/**",
-                "partials/**"
-            ],
-            "to": "${TOP}",
-            "overwrite": false
-        }
-    ],
+    "export": {
+        "from": [ 
+            "source/**",
+            "layouts/**",
+            "partials/**"
+        ],
+        "to": "${TOP}",
+        "overwrite": false
+    },
     "blend": [
         "esp.json",
         "expansive.json"
     ],
     "ignore": [
-        "start.me"
+        "test**"
     ],
-    "skeleton": true
+    "mode": "debug"
 }
