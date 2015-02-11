@@ -2,7 +2,9 @@
     "name": "esp-html-skeleton",
     "description": "ESP Server-Side HTML MVC",
     "version": "5.3.0",
-    "pak": ">=0.10",
+    "keywords": [
+        "esp"
+    ],
     "licenses": [
         {
             "type": "GPL",
@@ -12,9 +14,6 @@
             "url": "https://embedthis.com/licensing/"
         }
     ],
-    "keywords": [
-        "esp"
-    ],
     "dependencies": {
         "esp-mvc": "~5.3",
         "exp-js": "~0.2",
@@ -22,21 +21,33 @@
         "exp-css": "~0.2",
         "exp-esp": "~0.1"
     },
-    "export": {
-        "from": [ 
-            "source/**",
-            "layouts/**",
-            "partials/**"
-        ],
-        "to": "${TOP}",
-        "overwrite": false
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/embedthis/esp-html-skeleton.git"
     },
-    "blend": [
-        "esp.json",
-        "expansive.json"
-    ],
     "ignore": [
         "test**"
     ],
-    "mode": "debug"
+    "pak": {
+        "blend": {
+            "pak": {
+                "?mode": "debug",
+                "?import": true
+            }
+        },
+        "export": {
+            "from": [ 
+                "source/**",
+                "layouts/**",
+                "partials/**"
+            ],
+            "to": "${TOP}",
+            "overwrite": false
+        },
+        "manage": [
+            "esp.json",
+            "expansive.json"
+        ],
+        "version": ">=0.10"
+    }
 }
