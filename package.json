@@ -37,7 +37,7 @@
         },
         "export": {
             "from": [ 
-                "source/**",
+                "contents/**",
                 "layouts/**",
                 "partials/**"
             ],
