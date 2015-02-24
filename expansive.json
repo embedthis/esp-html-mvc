@@ -4,7 +4,9 @@
 {
     release: {
         services: {
-            'minify-css': true
+            "minify-css": {
+                "minify": true
+            }
         }
     }
 }
