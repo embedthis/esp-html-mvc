@@ -1,7 +1,7 @@
 esp-html-skeleton
 ===
 
-HTML5 skeleton for ESP
+MVC skeleton for ESP
 
 #### Description
 

@@ -1,5 +1,5 @@
 /*
-    post Controller (esp-html-skeleton)
+    post Controller (esp-mvc-skeleton)
  */
 #include "esp.h"
 

@@ -1,7 +1,0 @@
-
-        <div class="feedback">
-            <% renderFlash("all"); %>
-        </div>
-        <@ renderScripts() @>
-
-

@@ -5,11 +5,11 @@
             "-controller": "esp-mvc/generate/controller.c",
             "-controllerSingleton": "esp-mvc/generate/controllerSingleton.c",
 
-            "?appweb": "esp-html-skeleton/generate/appweb.conf",
-            "?clientList": "esp-html-skeleton/generate/list.esp",
-            "?clientEdit": "esp-html-skeleton/generate/edit.esp",
-            "?controller": "esp-html-skeleton/generate/controller.c",
-            "?controllerSingleton": "esp-html-skeleton/generate/controllerSingleton.c"
+            "?appweb": "esp-mvc-skeleton/generate/appweb.conf",
+            "?clientList": "esp-mvc-skeleton/generate/list.esp",
+            "?clientEdit": "esp-mvc-skeleton/generate/edit.esp",
+            "?controller": "esp-mvc-skeleton/generate/controller.c",
+            "?controllerSingleton": "esp-mvc-skeleton/generate/controllerSingleton.c"
         }
     },
     "http": {

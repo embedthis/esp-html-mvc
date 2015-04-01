@@ -1,4 +1,4 @@
-esp-html-skeleton
+esp-mvc-skeleton
 ===
 
 HTML5 skeleton for ESP
@@ -19,7 +19,7 @@ Provides a skeleton for a HTML5 application using ESP, Expansive and Less styles
 
 ### Installation
 
-    pak install esp-html-skeleton
+    pak install esp-mvc-skeleton
 
 ### Building
 

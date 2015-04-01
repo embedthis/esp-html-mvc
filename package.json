@@ -15,11 +15,8 @@
         }
     ],
     "dependencies": {
-        "esp-mvc": "^5.4",
-        "exp-js": "^0.2",
-        "exp-less": "^0.2",
-        "exp-css": "^0.2",
-        "exp-esp": "^0.1"
+        "esp-html": "^5.4",
+        "esp-html-skeleton": "^5.4"
     },
     "repository": {
         "type": "git",
@@ -29,24 +26,15 @@
         "test**"
     ],
     "pak": {
-        "blend": {
-            "pak": {
-                "?mode": "debug",
-                "?import": true
-            }
-        },
         "export": {
-            "from": [ 
-                "contents/**",
-                "layouts/**",
-                "partials/**"
+            "from": [
+                "contents/**"
             ],
             "to": "${TOP}",
             "overwrite": false
         },
         "manage": [
-            "esp.json",
-            "expansive.json"
+            "esp.json"
         ],
         "version": ">=0.10"
     }
