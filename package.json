@@ -15,8 +15,7 @@
         }
     ],
     "dependencies": {
-        "esp-html": "^5.4",
-        "esp-html-skeleton": "^5.4"
+        "esp-skeleton": "^5.4"
     },
     "repository": {
         "type": "git",
