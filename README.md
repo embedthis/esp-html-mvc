@@ -1,11 +1,15 @@
 esp-html-skeleton
 ===
 
-MVC skeleton for ESP
+ESP Application skeleton for HTML5 MVC applications.
 
 #### Description
 
-Provides a skeleton for a HTML5 application using ESP, Expansive and Less stylesheets.
+Provides a skeleton for HTML5 MVC applications using ESP, Expansive and Less stylesheets.
+
+The **esp-html-skeleton** builds up on the [esp-skeleton](https://github.com/embedthis/esp-skeleton) package and 
+adds a default look and feel, Less stylesheet, theme stylesheet, and scaffolds that can generate default views to 
+add/edit/delete resources.</p>
 
 The skeleton is configured for a "debug" and "release" mode of operation via the
 "mode" property in package.json. By default, debug mode will disable minification and
@@ -20,10 +24,16 @@ mangling of scripts.
 * generate/* &mdash; Generation templates
 * layouts/default.html.exp &mdash; Master web page layout 
 * partials/* &mdash; Web page partial content
-* Configuration for Expansive plugins:
-    * [exp-css](https://github.com/embedthis/exp-css) for CSS files
-    * [exp-less](https://github.com/embedthis/exp-less) for Less files
-    * [exp-j](https://github.com/embedthis/exp-js) for script files
+
+#### Dependencies
+
+The esp-skeleton package depends upon:
+
+* [exp-css](https://github.com/embedthis/exp-css) to process CSS files
+* [exp-less](https://github.com/embedthis/exp-less) to process Less files
+* [exp-js](https://github.com/embedthis/exp-js) to process script files
+* [exp-esp](https://github.com/embedthis/exp-esp) to compile ESP controllers and pages
+* [esp-skeleton](https://github.com/embedthis/esp-skeleton) for a basic ESP application skeleton.
 
 ### Installation
 
@@ -135,7 +145,7 @@ To generate a scaffold
 }
 ```
 
+### Download
 
-### Get Pak from
-
-[https://embedthis.com/pak](https://embedthis.com/pak)
+* [Pak](https://embedthis.com/pak/download.html)
+* [Expansive](https://embedthis.com/expansive/download.html)
