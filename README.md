@@ -1,39 +1,39 @@
 esp-html-skeleton
 ===
 
-ESP Application skeleton for HTML5 MVC applications.
+ESP Application skeleton for HTML MVC applications.
 
 #### Description
 
-Provides a skeleton for HTML5 MVC applications using ESP, Expansive and Less stylesheets.
+Provides a skeleton for HTML MVC applications using ESP, Expansive and Less stylesheets.
 
-The **esp-html-skeleton** builds up on the [esp-skeleton](https://github.com/embedthis/esp-skeleton) package and 
-adds a default look and feel, Less stylesheet, theme stylesheet, and scaffolds that can generate default views to 
-add/edit/delete resources.</p>
+The **esp-html-skeleton** provides provides a environment for building HTML MVC applications and web sites. 
+The skeleton includes the ESP default directory structure, templates for generating controllers, database migrations,
+and scaffolds. The skeleton provides a default look and feel and includes a home page and Less-based stylesheet.
 
-The skeleton is configured for a "debug" and "release" mode of operation via the
-"mode" property in package.json. By default, debug mode will disable minification and
-mangling of scripts.
+The skeleton provides configuration for a "debug" and "release" mode of operation via
+the "pak.mode" property in package.json. By default, debug mode will use pre-minified
+libraries if they have a symbol map file. Release mode will minify scripts as required.
 
 #### Provides
 
-* documents/css &mdash; Application less stylesheets
-* documents/index.esp &mdash; Default home page
+* contents/css &mdash; Application less stylesheets
+* contents/index.esp &mdash; Default home page
 * esp.json &mdash; ESP configuration file
 * expansive.json &mdash; Expansive configuration file
-* generate/* &mdash; Generation templates
+* generate/ &mdash; Directory containing generation templates
 * layouts/default.html.exp &mdash; Master web page layout 
-* partials/* &mdash; Web page partial content
+* partials/ &mdash; Web page partial content
 
 #### Dependencies
 
-The esp-skeleton package depends upon:
+The esp-html-skeleton package depends upon:
 
 * [exp-css](https://github.com/embedthis/exp-css) to process CSS files
 * [exp-less](https://github.com/embedthis/exp-less) to process Less files
 * [exp-js](https://github.com/embedthis/exp-js) to process script files
 * [exp-esp](https://github.com/embedthis/exp-esp) to compile ESP controllers and pages
-* [esp-skeleton](https://github.com/embedthis/esp-skeleton) for a basic ESP application skeleton.
+* [esp-mvc](https://github.com/embedthis/esp-mvc) for ESP MVC application support.
 
 ### Installation
 
@@ -54,7 +54,7 @@ or
 
 #### Generate Targets
 
-To generate an appweb.conf Appweb configuration file for hosting the ESP application in Appweb.
+To generate an appweb.conf configuration file for hosting the ESP application in Appweb.
 
     esp generate appweb
 

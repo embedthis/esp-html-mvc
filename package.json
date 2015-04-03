@@ -15,7 +15,7 @@
         }
     ],
     "dependencies": {
-        "esp-skeleton": "^5.4"
+        "esp-mvc": "^5.4"
     },
     "repository": {
         "type": "git",
@@ -27,7 +27,9 @@
     "pak": {
         "export": {
             "from": [
-                "contents/**"
+                "contents/**",
+                "layouts/**",
+                "partials/**"
             ],
             "to": "${TOP}",
             "overwrite": false

@@ -1,7 +1,7 @@
 {
     "esp": {
         "generate": {
-            "-controller": "esp-skeleton/generate/controller.c",
+            "-controller": "esp-mvc/generate/controller.c",
 
             "?clientList": "esp-html-skeleton/generate/list.esp",
             "?clientEdit": "esp-html-skeleton/generate/edit.esp",
