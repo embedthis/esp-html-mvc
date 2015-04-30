@@ -3,7 +3,7 @@ esp-html-skeleton
 
 ESP Application skeleton for HTML MVC applications.
 
-#### Description
+### Description
 
 Provides a skeleton for HTML MVC applications using ESP, Expansive and Less stylesheets.
 
@@ -15,17 +15,17 @@ The skeleton provides configuration for a "debug" and "release" mode of operatio
 the "pak.mode" property in package.json. By default, debug mode will use pre-minified
 libraries if they have a symbol map file. Release mode will minify scripts as required.
 
-#### Provides
+### Provides
 
 * contents/css &mdash; Application less stylesheets
 * contents/index.esp &mdash; Default home page
 * esp.json &mdash; ESP configuration file
 * expansive.json &mdash; Expansive configuration file
-* generate/ &mdash; Directory containing generation templates
 * layouts/default.html.exp &mdash; Master web page layout 
+* paks/ &mdash; Installed packages
 * partials/ &mdash; Web page partial content
 
-#### Dependencies
+### Dependencies
 
 The esp-html-skeleton package depends upon:
 
@@ -52,7 +52,7 @@ or
     expansive render
     esp
 
-#### Generate Targets
+### Generate Targets
 
 To generate an appweb.conf configuration file for hosting the ESP application in Appweb.
 
