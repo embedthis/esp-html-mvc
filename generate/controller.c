@@ -63,7 +63,7 @@ static void remove${UCONTROLLER}() {
  */
 static void update${UCONTROLLER}() { 
     if (smatch(param("submit"), "Delete")) {
-        removePost();
+        remove${UCONTROLLER}();
     } else {
         if (updateFields("${CONTROLLER}", params())) {
             flash("info", "${UCONTROLLER} Updated Successfully");
@@ -78,7 +78,7 @@ static void update${UCONTROLLER}() {
 /*
     Redirect to get a properly terminated URL. Essential for relative URL references.
  */
-static void redirectPost() {
+static void redirect${UCONTROLLER}() {
     redirect(sjoin(getUri(), "/", NULL));
 }
 
