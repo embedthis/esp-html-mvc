@@ -68,7 +68,7 @@ static void update${UCONTROLLER}() {
     }
 }
 
-static void common(HttpConn *conn) {
+static void common${UCONTROLLER}(HttpConn *conn) {
 }
 
 
@@ -76,7 +76,7 @@ static void common(HttpConn *conn) {
     Dynamic module initialization
  */
 ESP_EXPORT int esp_controller_${NAME}_${CONTROLLER}(HttpRoute *route, MprModule *module) {
-    espDefineBase(route, common);
+    espDefineBase(route, common${UCONTROLLER});
     espDefineAction(route, "${CONTROLLER}/create", create${UCONTROLLER});
     espDefineAction(route, "${CONTROLLER}/remove", remove${UCONTROLLER});
     espDefineAction(route, "${CONTROLLER}/edit", edit${UCONTROLLER});
