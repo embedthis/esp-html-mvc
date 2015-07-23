@@ -8,10 +8,10 @@
  */
 static void create${UCONTROLLER}() { 
     if (updateRec(createRec("${CONTROLLER}", params()))) {
-        flash("info", "New ${CONTROLLER} Created");
+        feedback("info", "New ${CONTROLLER} Created");
         renderView("/");
     } else {
-        flash("error", "Cannot Create ${UCONTROLLER}");
+        feedback("error", "Cannot Create ${UCONTROLLER}");
         renderView("${CONTROLLER}/edit");
     }
 }
@@ -44,7 +44,7 @@ static void init${UCONTROLLER}() {
  */
 static void remove${UCONTROLLER}() { 
     if (removeRec("${CONTROLLER}", param("id"))) {
-        flash("info", "${UCONTROLLER} Removed");
+        feedback("info", "${UCONTROLLER} Removed");
     }
     redirect(".");
 }
@@ -59,10 +59,10 @@ static void update${UCONTROLLER}() {
         removePost();
     } else {
         if (updateFields("${CONTROLLER}", params())) {
-            flash("info", "${UCONTROLLER} Updated Successfully");
+            feedback("info", "${UCONTROLLER} Updated Successfully");
             redirect(".");
         } else {
-            flash("error", "Cannot Update ${UCONTROLLER}");
+            feedback("error", "Cannot Update ${UCONTROLLER}");
             renderView("${CONTROLLER}/edit");
         }
     }
