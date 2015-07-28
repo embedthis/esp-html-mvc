@@ -26,6 +26,11 @@
         "test**"
     ],
     "pak": {
+        "blend": {
+            "devDependencies": {
+                "?esp": "~6.x"
+            }
+        },
         "export": {
             "from": [
                 "contents/**",
