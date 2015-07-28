@@ -8,10 +8,10 @@
  */ 
 static void createPost() { 
     if (updateRec(createRec("post", params()))) {
-        flash("inform", "New post Created");
+        feedback("inform", "New post Created");
         renderView("post/post-list");
     } else {
-        flash("error", "Cannot Create Post");
+        feedback("error", "Cannot Create Post");
         renderView("post/post-edit");
     }
 }
@@ -51,7 +51,7 @@ static void listPost() {
  */
 static void removePost() { 
     if (removeRec("post", param("id"))) {
-        flash("inform", "Post Removed");
+        feedback("inform", "Post Removed");
     }
     redirect("list");
 }
@@ -66,10 +66,10 @@ static void updatePost() {
         removePost();
     } else {
         if (updateFields("post", params())) {
-            flash("inform", "Post Updated Successfully");
+            feedback("inform", "Post Updated Successfully");
             redirect("list");
         } else {
-            flash("error", "Cannot Update Post");
+            feedback("error", "Cannot Update Post");
             renderView("post/post-edit");
         }
     }
