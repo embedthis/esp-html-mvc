@@ -1,7 +1,7 @@
 {
     "name": "esp-html-skeleton",
     "description": "ESP Server-Side HTML MVC",
-    "version": "5.4.4",
+    "version": "5.4.5",
     "keywords": [
         "esp"
     ],
@@ -17,6 +17,9 @@
     ],
     "dependencies": {
         "esp-mvc": "~5.4"
+    },
+    "devDependencies": {
+        "pak": ">=0.11.3"
     },
     "repository": {
         "type": "git",
@@ -42,7 +45,6 @@
         },
         "manage": [
             "esp.json"
-        ],
-        "version": ">=0.10"
+        ]
     }
 }
