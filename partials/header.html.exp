@@ -2,7 +2,6 @@
     <meta charset="utf-8" />
     <meta name="description" content="<@= meta.description || meta.title @>">
     <link rel="icon" href="data:image/x-icon;base64," type="image/x-icon" />
-    <@ renderCanonical() @>
     <@ renderStyles() @>
     <link rel="stylesheet" href="@~/css/all.css" type="text/css" />
 
