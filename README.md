@@ -147,5 +147,5 @@ To generate a scaffold
 
 ### Download
 
-* [Pak](https://embedthis.com/pak/download.html)
-* [Expansive](https://embedthis.com/expansive/download.html)
+* [Pak](https://embedthis.com/pak/)
+* [Expansive](https://embedthis.com/expansive/)
