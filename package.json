@@ -32,6 +32,9 @@
         "blend": {
             "devDependencies": {
                 "?esp": "~6.x"
+            },
+            "directories": {
+                "?export": "contents/lib"
             }
         },
         "export": {
