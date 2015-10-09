@@ -47,7 +47,8 @@
             "overwrite": false
         },
         "manage": [
-            "esp.json"
+            "esp.json",
+            "expansive.json"
         ]
     }
 }
