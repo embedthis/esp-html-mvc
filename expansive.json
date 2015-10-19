@@ -4,7 +4,7 @@
 {
     debug: {
         services: {
-            "?compress": false,
+            "?gzip": false,
             "?html": false,
             "?js": {
                 "?minify": false,
@@ -15,12 +15,12 @@
     },
     release: {
         services: {
-            "?compress": true,
             "css": {
                 "?minify": true,
                 "?usemin": true,
                 "?usemap": false
             },
+            "?gzip": true,
             "js": {
                 "?minify": true,
                 "?usemin": true,
