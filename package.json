@@ -49,6 +49,7 @@
         "manage": [
             "esp.json",
             "expansive.json"
-        ]
+        ],
+        "origin": "embedthis/esp-html-skeleton"
     }
 }
