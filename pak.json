@@ -1,7 +1,7 @@
 {
     "name": "esp-html-skeleton",
     "description": "ESP Server-Side HTML MVC",
-    "version": "5.5.0",
+    "version": "5.5.1",
     "keywords": [
         "esp"
     ],
@@ -28,28 +28,26 @@
     "ignore": [
         "test**"
     ],
-    "pak": {
-        "blend": {
-            "devDependencies": {
-                "?esp": "~6.x"
-            },
-            "directories": {
-                "?export": "contents/lib"
-            }
+    "blend": {
+        "devDependencies": {
+            "?esp": ">=7.0"
         },
-        "export": {
-            "from": [
-                "contents/**",
-                "layouts/**",
-                "partials/**"
-            ],
-            "to": "${TOP}",
-            "overwrite": false
-        },
-        "manage": [
-            "esp.json",
-            "expansive.json"
+        "directories": {
+            "?export": "contents/lib"
+        }
+    },
+    "export": {
+        "from": [
+            "contents/**",
+            "layouts/**",
+            "partials/**"
         ],
-        "origin": "embedthis/esp-html-skeleton"
-    }
+        "to": "${TOP}",
+        "overwrite": false
+    },
+    "manage": [
+        "esp.json",
+        "expansive.json"
+    ],
+    "origin": "embedthis/esp-html-skeleton"
 }
