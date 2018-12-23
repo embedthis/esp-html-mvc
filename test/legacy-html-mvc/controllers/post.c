@@ -5,8 +5,8 @@
 
 /*
     Create a new resource in the database
- */ 
-static void createPost() { 
+ */
+static void createPost() {
     if (updateRec(createRec("post", params()))) {
         feedback("inform", "New post Created");
         renderView("post/post-list");
@@ -19,14 +19,14 @@ static void createPost() {
 /*
     Prepare a template for editing a resource
  */
-static void editPost() { 
+static void editPost() {
     readRec("post", param("id"));
 }
 
 /*
     Get a resource
- */ 
-static void getPost() { 
+ */
+static void getPost() {
     readRec("post", param("id"));
     renderView("post/post-edit");
 }
@@ -34,22 +34,22 @@ static void getPost() {
 /*
     Initialize a new resource for the client to complete
  */
-static void initPost() { 
+static void initPost() {
     createRec("post", 0);
     renderView("post/post-edit");
 }
 
 /*
     List the resources in this group
- */ 
-static void listPost() { 
+ */
+static void listPost() {
     renderView("post/post-list");
 }
 
 /*
     Remove a resource identified by the "id" parameter
  */
-static void removePost() { 
+static void removePost() {
     if (removeRec("post", param("id"))) {
         feedback("inform", "Post Removed");
     }
@@ -61,7 +61,7 @@ static void removePost() {
     If "id" is not defined, this is the same as a create
     Also we tunnel delete here if the user clicked delete
  */
-static void updatePost() { 
+static void updatePost() {
     if (smatch(param("submit"), "Delete")) {
         removePost();
     } else {
@@ -85,7 +85,7 @@ static void common(HttpConn *conn) {
 /*
     Dynamic module initialization
  */
-ESP_EXPORT int esp_controller_blog_post(HttpRoute *route, MprModule *module) {
+ESP_EXPORT int esp_controller_blog_post(HttpRoute *route) {
     espDefineBase(route, common);
     espDefineAction(route, "post-create", createPost);
     espDefineAction(route, "post-remove", removePost);
@@ -96,7 +96,7 @@ ESP_EXPORT int esp_controller_blog_post(HttpRoute *route, MprModule *module) {
     espDefineAction(route, "post-update", updatePost);
     espDefineAction(route, "post-cmd-", listPost);
     espDefineAction(route, "post", redirectPost);
-    
+
 #if SAMPLE_VALIDATIONS
     Edi *edi = espGetRouteDatabase(route);
     ediAddValidation(edi, "present", "post", "title", 0);

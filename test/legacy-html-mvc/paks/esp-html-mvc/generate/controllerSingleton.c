@@ -6,7 +6,7 @@
 /*
     Create a new resource in the database
  */
-static void create${UCONTROLLER}() { 
+static void create${UCONTROLLER}() {
     if (updateRec(createRec("${CONTROLLER}", params()))) {
         flash("inform", "New ${CONTROLLER} Created");
         renderView("${CONTROLLER}/${CONTROLLER}-list");
@@ -19,14 +19,14 @@ static void create${UCONTROLLER}() {
 /*
     Prepare an edit template with the resource
  */
-static void edit${UCONTROLLER}() { 
+static void edit${UCONTROLLER}() {
     readRec("${CONTROLLER}", param("id"));
 }
 
 /*
     Get a resource
  */
-static void get${UCONTROLLER}() { 
+static void get${UCONTROLLER}() {
     readRec("${CONTROLLER}", param("id"));
     renderView("${CONTROLLER}/${CONTROLLER}-edit");
 }
@@ -34,7 +34,7 @@ static void get${UCONTROLLER}() {
 /*
     Initialize a new resource for the client to complete
  */
-static void init${UCONTROLLER}() { 
+static void init${UCONTROLLER}() {
     createRec("${CONTROLLER}", 0);
     renderView("${CONTROLLER}/${CONTROLLER}-edit");
 }
@@ -42,7 +42,7 @@ static void init${UCONTROLLER}() {
 /*
     Remove a resource identified by the "id" parameter
  */
-static void remove${UCONTROLLER}() { 
+static void remove${UCONTROLLER}() {
     if (removeRec("${CONTROLLER}", param("id"))) {
         flash("inform", "${UCONTROLLER} Removed");
     }
@@ -54,7 +54,7 @@ static void remove${UCONTROLLER}() {
     If "id" is not defined, this is the same as a create
     Also we tunnel delete here if the user clicked delete
  */
-static void update${UCONTROLLER}() { 
+static void update${UCONTROLLER}() {
     if (smatch(param("submit"), "Delete")) {
         removePost();
     } else {
@@ -79,7 +79,7 @@ static void common(HttpConn *conn) {
 /*
     Dynamic module initialization
  */
-ESP_EXPORT int esp_controller_${APP}_${CONTROLLER}(HttpRoute *route, MprModule *module) {
+ESP_EXPORT int esp_controller_${APP}_${CONTROLLER}(HttpRoute *route) {
     espDefineBase(route, common);
     espDefineAction(route, "${CONTROLLER}-create", create${UCONTROLLER});
     espDefineAction(route, "${CONTROLLER}-remove", remove${UCONTROLLER});
@@ -90,7 +90,7 @@ ESP_EXPORT int esp_controller_${APP}_${CONTROLLER}(HttpRoute *route, MprModule *
     espDefineAction(route, "${CONTROLLER}-update", update${UCONTROLLER});
     espDefineAction(route, "${CONTROLLER}-cmd-", list${UCONTROLLER});
     espDefineAction(route, "${CONTROLLER}", redirect${UCONTROLLER});
-${DEFINE_ACTIONS}    
+${DEFINE_ACTIONS}
 #if SAMPLE_VALIDATIONS
     Edi *edi = espGetRouteDatabase(route);
     ediAddValidation(edi, "present", "${CONTROLLER}", "title", 0);
