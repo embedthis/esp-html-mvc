@@ -1,7 +1,7 @@
 {
     "name": "esp-html-skeleton",
     "description": "ESP Server-Side HTML MVC",
-    "version": "5.5.2",
+    "version": "6.0.0",
     "keywords": [
         "esp"
     ],
@@ -16,10 +16,10 @@
         }
     ],
     "dependencies": {
-        "esp-mvc": "~5.5"
+        "embedthis/esp-mvc": "~6"
     },
     "devDependencies": {
-        "pak": ">=0.11.3"
+        "pak": ">=1.0.0"
     },
     "repository": {
         "type": "git",
@@ -30,7 +30,7 @@
     ],
     "blend": {
         "devDependencies": {
-            "?esp": ">=7.0"
+            "?esp": ">=8.0"
         },
         "directories": {
             "?export": "contents/lib"

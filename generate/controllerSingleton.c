@@ -6,8 +6,8 @@
 /*
     Create a new resource in the database
  */
-static void create${UCONTROLLER}() { 
-    if (updateRec(createRec("${CONTROLLER}", params()))) {
+static void create${UCONTROLLER}() {
+    if (updateRec(createRec("${CONTROLLER}", params(NULL)))) {
         feedback("info", "New ${CONTROLLER} Created");
         renderView("/");
     } else {
@@ -19,14 +19,14 @@ static void create${UCONTROLLER}() {
 /*
     Prepare an edit template with the resource
  */
-static void edit${UCONTROLLER}() { 
+static void edit${UCONTROLLER}() {
     readRec("${CONTROLLER}", param("id"));
 }
 
 /*
     Get a resource
  */
-static void get${UCONTROLLER}() { 
+static void get${UCONTROLLER}() {
     readRec("${CONTROLLER}", param("id"));
     renderView("${CONTROLLER}/edit");
 }
@@ -34,7 +34,7 @@ static void get${UCONTROLLER}() {
 /*
     Initialize a new resource for the client to complete
  */
-static void init${UCONTROLLER}() { 
+static void init${UCONTROLLER}() {
     createRec("${CONTROLLER}", 0);
     renderView("${CONTROLLER}/edit");
 }
@@ -42,7 +42,7 @@ static void init${UCONTROLLER}() {
 /*
     Remove a resource identified by the "id" parameter
  */
-static void remove${UCONTROLLER}() { 
+static void remove${UCONTROLLER}() {
     if (removeRec("${CONTROLLER}", param("id"))) {
         feedback("info", "${UCONTROLLER} Removed");
     }
@@ -54,11 +54,11 @@ static void remove${UCONTROLLER}() {
     If "id" is not defined, this is the same as a create
     Also we tunnel delete here if the user clicked delete
  */
-static void update${UCONTROLLER}() { 
+static void update${UCONTROLLER}() {
     if (smatch(param("submit"), "Delete")) {
         removePost();
     } else {
-        if (updateFields("${CONTROLLER}", params())) {
+        if (updateFields("${CONTROLLER}", params(NULL))) {
             feedback("info", "${UCONTROLLER} Updated Successfully");
             redirect(".");
         } else {
@@ -68,7 +68,7 @@ static void update${UCONTROLLER}() {
     }
 }
 
-static void common${UCONTROLLER}(HttpConn *conn) {
+static void common${UCONTROLLER}(HttpConn *conn, EspAction *action) {
 }
 
 
@@ -76,14 +76,15 @@ static void common${UCONTROLLER}(HttpConn *conn) {
     Dynamic module initialization
  */
 ESP_EXPORT int esp_controller_${NAME}_${CONTROLLER}(HttpRoute *route) {
-    espDefineBase(route, common${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}/create", create${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}/remove", remove${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}/edit", edit${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}/get", get${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}/init", init${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}/update", update${UCONTROLLER});
-${DEFINE_ACTIONS}    
+    cchar   *role = "user";
+    espController(route, common${UCONTROLLER});
+    espAction(route, "${CONTROLLER}/create", role, create${UCONTROLLER});
+    espAction(route, "${CONTROLLER}/remove", role, remove${UCONTROLLER});
+    espAction(route, "${CONTROLLER}/edit", role, edit${UCONTROLLER});
+    espAction(route, "${CONTROLLER}/get", role, get${UCONTROLLER});
+    espAction(route, "${CONTROLLER}/init", role, init${UCONTROLLER});
+    espAction(route, "${CONTROLLER}/update", role, update${UCONTROLLER});
+${DEFINE_ACTIONS}
 #if SAMPLE_VALIDATIONS
     Edi *edi = espGetRouteDatabase(route);
     ediAddValidation(edi, "present", "${CONTROLLER}", "title", 0);
